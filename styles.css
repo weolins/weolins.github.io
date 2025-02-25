@@ -14,20 +14,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 15px 5%; /* Slightly reduced padding */
     background: #222;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Required for absolute positioning of nav */
 }
 
 header h1 {
     font-family: 'Belanosima', sans-serif;
     color: cyan;
+    margin: 0; /* Remove default margin */
+    flex: 0; /* Do not allow title to take up extra space */
+    font-size: 2rem; /* Slightly smaller font size for the title */
+    white-space: nowrap; /* Prevent title from wrapping to the next line */
+}
+
+nav {
+    position: absolute; /* Position nav absolutely within the header */
+    left: 50%; /* Move nav to the center of the screen */
+    transform: translateX(-50%); /* Center nav precisely */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px; /* Slightly reduced gap between nav links */
     padding: 0;
     margin: 0;
 }
@@ -41,6 +52,8 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent nav links from wrapping */
+    font-size: 1.25rem; /* Slightly smaller font size for nav links */
 }
 
 nav ul li a:hover {
@@ -49,12 +62,14 @@ nav ul li a:hover {
 
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Slightly reduced gap between social links */
+    flex: 0; /* Do not allow social links to take up extra space */
+    align-items: center; /* Align icons and button vertically */
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Slightly smaller icon size */
+    height: 35px; /* Slightly smaller icon size */
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
@@ -62,14 +77,17 @@ nav ul li a:hover {
 
 .linkedin { background-image: url('icons/linkedin.svg'); }
 .github { background-image: url('icons/github.svg'); }
+
 .resume-button {
-    padding: 10px 15px;
+    padding: 10px 16px; /* Slightly smaller padding for the button */
     background-color: cyan;
     color: #171717;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease;
+    font-size: 1rem; /* Slightly smaller font size for the button */
+    white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .resume-button:hover {
@@ -78,8 +96,72 @@ nav ul li a:hover {
 
 /* Sections */
 .section {
-    padding: 40px 10%; /* Reduced padding to reduce space */
-    min-height: 60vh; /* Reduced min-height to reduce space */
+    padding: 10px 10%;
+    min-height: 50vh; /* Reduced from 60vh */
+}
+
+/* Ensure the home section content is aligned properly */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Circular profile picture */
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Home summary text */
+.home-summary {
+    max-width: 60%;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.home-summary h2 {
+    color: cyan;
+    font-family: 'Belanosima', sans-serif;
+    margin-bottom: 20px;
+}
+
+.home-summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
 }
 
 .section h2 {
@@ -122,11 +204,18 @@ nav ul li a:hover {
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    margin: 20px 0; /* Reduced margin between projects */
+    margin: 50px 0; /* Reduced margin between projects */
     border-radius: 10px;
     overflow: hidden;
     transition: background 0.5s ease-in-out;
     height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project h3 {
@@ -169,6 +258,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+/* Adjust arrow positioning and size */
 .project-arrows {
     position: absolute;
     top: 50%;
@@ -176,18 +266,24 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 0; /* Ensure arrows are below text */
+    z-index: 1; /* Ensure arrows are above text */
+    opacity: 0; /* Hide arrows by default */
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project-arrows {
+    opacity: 1; /* Show arrows on hover */
 }
 
 .arrow {
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    padding: 8px; /* Smaller padding */
     cursor: pointer;
     border-radius: 50%;
     color: white;
-    font-size: 20px;
+    font-size: 16px; /* Smaller font size */
     transition: background 0.3s;
-    margin: 0 10px; /* Add margin to prevent overlap */
+    margin: 0 15px; /* Add margin to prevent overlap */
 }
 
 .arrow:hover {
