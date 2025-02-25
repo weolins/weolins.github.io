@@ -31,14 +31,43 @@
 
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>Here are some of my key skills:</p>
+        <div class="about-content">
+            <div class="contact-info">
+                <h3>Contact Me</h3>
+                <p><strong>Email:</strong> apoorvmak.s@gmail.com</p>
+                <p><strong>Phone:</strong> (587) 340-0302</p>
+                <p><strong>Location:</strong> Edmonton, AB</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/weolins/">weolins</a></p>
+            </div>
+            <div class="skills-info">
+                <h3>Skills</h3>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, Java, C, C++</li>
+                    <li><strong>Software:</strong> Git, Android Studio, Unity, RStudio, Firebase</li>
+                    <li><strong>Creative Tools:</strong> Adobe Photoshop, Audacity, FL Studio, Da Vinci Resolve, Krita, Blender</li>
+                    <li><strong>Languages:</strong> Fluent in English and Hindi</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="section">
         <h2>Projects</h2>
         <div class="project" data-images='["images/noodle1.png", "images/noodle2.png", "images/noodle3.png"]' style="background-image: url('images/noodle1.png');">
             <h3>Noodle - Event Lottery App</h3>
-            <div class="project-text">Developed a community event lottery app for Android.</div>
+            <div class="project-text">
+                <p><strong>Duration:</strong> Sept. 2024 - Dec. 2024</p>
+                <p><strong>Role:</strong> Software Developer / UI Designer</p>
+                <p><strong>Description:</strong> Developed a community event lottery app that allows users to create, join, and manage events with custom-generated QR codes using Android Studio and Java.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Managed user data using Firebase.</li>
+                    <li>Designed UI mockups in Adobe Photoshop and coded them in XML.</li>
+                    <li>Integrated real-time notifications and event tracking.</li>
+                    <li>Added geolocation verification, user metrics, and image uploads.</li>
+                </ul>
+                <p><strong>GitHub:</strong> <a href="https://github.com/CMPUT301F24Noodle/Noodle-Event-Lottery">Noodle-Event-Lottery</a></p>
+            </div>
             <div class="project-arrows">
                 <span class="arrow left" onclick="changeBackground(this.parentElement.parentElement, -1)">&#9664;</span>
                 <span class="arrow right" onclick="changeBackground(this.parentElement.parentElement, 1)">&#9654;</span>
@@ -47,24 +76,52 @@
         
         <div class="project" data-images='["images/underpressure1.png", "images/underpressure2.png", "images/underpressure3.png"]' style="background-image: url('images/underpressure1.png');">
             <h3>Under Pressure (Game)</h3>
-            <div class="project-text">A 2D thriller game developed in Unity.</div>
+            <div class="project-text">
+                <p><strong>Duration:</strong> Jan. 2024 - Apr. 2024</p>
+                <p><strong>Role:</strong> Producer / Audio Developer</p>
+                <p><strong>Description:</strong> Produced a 2D thriller game in Unity with the team "Massive Error."</p>
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>Scheduled weekly team meetings and managed tasks using Trello.</li>
+                    <li>Developed over 100 unique sound effects and the original soundtrack in FL Studio.</li>
+                    <li>Ensured timely completion of the project.</li>
+                </ul>
+                <p><strong>Play the Game:</strong> <a href="https://d0fu.itch.io/under-pressure">Under Pressure on itch.io</a></p>
+            </div>
             <div class="project-arrows">
                 <span class="arrow left" onclick="changeBackground(this.parentElement.parentElement, -1)">&#9664;</span>
                 <span class="arrow right" onclick="changeBackground(this.parentElement.parentElement, 1)">&#9654;</span>
             </div>
-            <div class="audio-section">
-                <h4>Original Soundtrack</h4>
-                <audio controls class="audio-player">
-                    <source src="audio/underpressure-ost.mp3" type="audio/mp3">
-                </audio>
-                <h4>Sound Effects</h4>
-                <div class="sound-effects">
-                    <audio controls class="audio-player"><source src="audio/underpressure-sfx1.mp3" type="audio/mp3"></audio>
-                    <audio controls class="audio-player"><source src="audio/underpressure-sfx2.mp3" type="audio/mp3"></audio>
-                    <audio controls class="audio-player"><source src="audio/underpressure-sfx3.mp3" type="audio/mp3"></audio>
-                    <audio controls class="audio-player"><source src="audio/underpressure-sfx4.mp3" type="audio/mp3"></audio>
-                    <audio controls class="audio-player"><source src="audio/underpressure-sfx5.mp3" type="audio/mp3"></audio>
-                </div>
+        </div>
+        <div class="audio-section">
+            <h4>Soundtrack:</h4>
+            <div class="sound-effects">
+                <audio controls class="audio-player"><source src="audio/underpressure-ost.mp3" type="audio/mp3"></audio>
+                <audio controls class="audio-player"><source src="audio/underpressure-sfx1.mp3" type="audio/mp3"></audio>
+                <audio controls class="audio-player"><source src="audio/underpressure-sfx2.mp3" type="audio/mp3"></audio>
+                <audio controls class="audio-player"><source src="audio/underpressure-sfx3.mp3" type="audio/mp3"></audio>
+                <audio controls class="audio-player"><source src="audio/underpressure-sfx4.mp3" type="audio/mp3"></audio>
+            </div>
+            <div class="sound-labels">
+                <span>Main Theme</span>
+                <span>Fire</span>
+                <span>Map</span>
+                <span>Radar</span>
+                <span>Placeholder</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Pokeo - Pokemon Generator (Android)</h3>
+            <div class="project-text">
+                <p><strong>Duration:</strong> Sept. 2024 - Dec. 2024</p>
+                <p><strong>Role:</strong> Software/API Developer</p>
+                <p><strong>Description:</strong> Designed metagames to add challenges to pre-existing Pokemon games.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Utilized Poke-API and Java to generate random Pokemon teams based on user needs.</li>
+                </ul>
+                <p><strong>GitHub:</strong> <a href="https://github.com/weolins/pokemon-generator">pokemon-generator</a></p>
             </div>
         </div>
     </section>
