@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -16,6 +17,11 @@
                 <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/weolins/" class="icon linkedin"></a>
+            <a href="https://github.com/weolins" class="icon github"></a>
+            <a href="resume.pdf" class="resume-button" download>Download Resume</a>
+        </div>
     </header>
 
     <section id="home" class="section">
@@ -26,17 +32,41 @@
     <section id="about" class="section">
         <h2>About Me</h2>
         <p>Here are some of my key skills:</p>
-        <div class="skills-table">
-            <div class="skill"><span>HTML</span><div class="bar"><div class="fill html"></div></div></div>
-            <div class="skill"><span>CSS</span><div class="bar"><div class="fill css"></div></div></div>
-            <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill js"></div></div></div>
-            <div class="skill"><span>Python</span><div class="bar"><div class="fill python"></div></div></div>
-        </div>
     </section>
 
     <section id="projects" class="section">
         <h2>Projects</h2>
-        <p>Coming soon...</p>
+        <div class="project" data-images='["images/noodle1.png", "images/noodle2.png", "images/noodle3.png"]' style="background-image: url('images/noodle1.png');">
+            <h3>Noodle - Event Lottery App</h3>
+            <div class="project-text">Developed a community event lottery app for Android.</div>
+            <div class="project-arrows">
+                <span class="arrow left" onclick="changeBackground(this.parentElement.parentElement, -1)">&#9664;</span>
+                <span class="arrow right" onclick="changeBackground(this.parentElement.parentElement, 1)">&#9654;</span>
+            </div>
+        </div>
+        
+        <div class="project" data-images='["images/underpressure1.png", "images/underpressure2.png", "images/underpressure3.png"]' style="background-image: url('images/underpressure1.png');">
+            <h3>Under Pressure (Game)</h3>
+            <div class="project-text">A 2D thriller game developed in Unity.</div>
+            <div class="project-arrows">
+                <span class="arrow left" onclick="changeBackground(this.parentElement.parentElement, -1)">&#9664;</span>
+                <span class="arrow right" onclick="changeBackground(this.parentElement.parentElement, 1)">&#9654;</span>
+            </div>
+            <div class="audio-section">
+                <h4>Original Soundtrack</h4>
+                <audio controls class="audio-player">
+                    <source src="audio/underpressure-ost.mp3" type="audio/mp3">
+                </audio>
+                <h4>Sound Effects</h4>
+                <div class="sound-effects">
+                    <audio controls class="audio-player"><source src="audio/underpressure-sfx1.mp3" type="audio/mp3"></audio>
+                    <audio controls class="audio-player"><source src="audio/underpressure-sfx2.mp3" type="audio/mp3"></audio>
+                    <audio controls class="audio-player"><source src="audio/underpressure-sfx3.mp3" type="audio/mp3"></audio>
+                    <audio controls class="audio-player"><source src="audio/underpressure-sfx4.mp3" type="audio/mp3"></audio>
+                    <audio controls class="audio-player"><source src="audio/underpressure-sfx5.mp3" type="audio/mp3"></audio>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
