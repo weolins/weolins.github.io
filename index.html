@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/cat.ico">
 </head>
 <body>
     <header>
@@ -47,12 +48,12 @@
                 <p><strong>Email:</strong> apoorvmak.s@gmail.com</p>
                 <p><strong>Phone:</strong> (587) 340-0302</p>
                 <p><strong>Location:</strong> Edmonton, AB</p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/weolins/">weolins</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/weolins/">Apoorv Makkar</a></p>
             </div>
             <div class="skills-info">
                 <h3>Skills</h3>
                 <ul>
-                    <li><strong>Programming Languages:</strong> Python, Java, C, C++</li>
+                    <li><strong>Programming Languages:</strong> Python, Java, C/C#, C++</li>
                     <li><strong>Software:</strong> Git, Android Studio, Unity, RStudio, Firebase</li>
                     <li><strong>Creative Tools:</strong> Adobe Photoshop, Audacity, FL Studio, Da Vinci Resolve, Krita, Blender</li>
                     <li><strong>Languages:</strong> Fluent in English and Hindi</li>
@@ -96,7 +97,13 @@
                     <li>Developed over 100 unique sound effects and the original soundtrack in FL Studio.</li>
                     <li>Ensured timely completion of the project.</li>
                 </ul>
-                <p><strong>Play the Game:</strong> <a href="https://d0fu.itch.io/under-pressure">Under Pressure on itch.io</a></p>
+                <div class="play-soundtrack-container">
+                    <p><strong>Play the Game:</strong> <a href="https://d0fu.itch.io/under-pressure">Under Pressure on itch.io</a></p>
+                    <div class="soundtrack-container">
+                        <h4 class="cyan-text">Soundtrack:</h4>
+                        <audio controls class="audio-player"><source src="audio/Soundtrack.wav" type="audio/wav"></audio>
+                    </div>
+                </div>
             </div>
             <div class="project-arrows">
                 <span class="arrow left" onclick="changeBackground(this.parentElement.parentElement, -1)">&#9664;</span>
@@ -104,20 +111,26 @@
             </div>
         </div>
         <div class="audio-section">
-            <h4>Soundtrack:</h4>
-            <div class="sound-effects">
-                <audio controls class="audio-player"><source src="audio/underpressure-ost.mp3" type="audio/mp3"></audio>
-                <audio controls class="audio-player"><source src="audio/underpressure-sfx1.mp3" type="audio/mp3"></audio>
-                <audio controls class="audio-player"><source src="audio/underpressure-sfx2.mp3" type="audio/mp3"></audio>
-                <audio controls class="audio-player"><source src="audio/underpressure-sfx3.mp3" type="audio/mp3"></audio>
-                <audio controls class="audio-player"><source src="audio/underpressure-sfx4.mp3" type="audio/mp3"></audio>
-            </div>
-            <div class="sound-labels">
-                <span>Main Theme</span>
-                <span>Fire</span>
-                <span>Map</span>
-                <span>Radar</span>
-                <span>Placeholder</span>
+            <div class="sound-effects-container">
+                <h4 class="cyan-text">Sound Effects:</h4>
+                <div class="sound-effects">
+                    <div class="sound-effect">
+                        <span class="yellow-text">Fire:</span>
+                        <audio controls class="audio-player"><source src="audio/Fire.wav" type="audio/wav"></audio>
+                    </div>
+                    <div class="sound-effect">
+                        <span class="yellow-text">Sonar:</span>
+                        <audio controls class="audio-player"><source src="audio/Sonar.wav" type="audio/wav"></audio>
+                    </div>
+                    <div class="sound-effect">
+                        <span class="yellow-text">Map:</span>
+                        <audio controls class="audio-player"><source src="audio/Map.wav" type="audio/wav"></audio>
+                    </div>
+                    <div class="sound-effect">
+                        <span class="yellow-text">Radio Chatter:</span>
+                        <audio controls class="audio-player"><source src="audio/Radio.wav" type="audio/wav"></audio>
+                    </div>
+                </div>
             </div>
         </div>
 
